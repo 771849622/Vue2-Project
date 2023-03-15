@@ -6,6 +6,7 @@ import Main from '../views/Main';
 import Mall from '../views/Mall';
 import PageOne from '../views/PageOne';
 import PageTwo from '../views/PageTwo';
+import Login from '../views/Login';
 
 // 1、创建路由组件
 // 2、将路由与组件进行映射
@@ -25,6 +26,11 @@ const routes = [
             {path: 'page2', name: 'page2', component: PageTwo},   // 页面2
         ]
     },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login
+    }
 ]
 const router = new VueRouter({
     routes
