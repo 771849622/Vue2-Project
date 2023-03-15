@@ -1,5 +1,6 @@
 <template>
     <el-row>
+        <!-- 左侧内容 -->
         <el-col :span="8" style="padding-right: 10px;">
             <el-card class="box-card">
                 <div class="user">
@@ -16,19 +17,12 @@
             </el-card>
             <el-card style="margin-top: 20px; height: 460px;">
                 <el-table :data="tableData" style="width: 100%">
-                    <!-- <el-table-column prop="name" label="课程">
-                    </el-table-column>
-                    <el-table-column prop="todayBuy" label="今日购买">
-                    </el-table-column>
-                    <el-table-column prop="monthBuy" label="本月购买">
-                    </el-table-column>
-                    <el-table-column prop="totalBuy" label="总购买">
-                    </el-table-column> -->
                     <el-table-column v-for="(val, key) in tableLabel" :key="key" :prop="key" :label="val">
                     </el-table-column>
                 </el-table>
             </el-card>
         </el-col>
+        <!-- 右侧内容 -->
         <el-col :span="16" style="padding-left: 10px;">
             <div class="num">
                 <el-card v-for="item in countData" :key="item.name" :body-style="{ display: 'flex', padding: '0' }">

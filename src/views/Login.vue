@@ -47,6 +47,9 @@ export default {
                         if (data.code == 20000) {
                             // 将token存入Cookie用于不同页面的通信
                             Cookie.set('token', data.data.token);
+                            // 获取菜单的数据，存入store中
+                            this.$store.commit('setMenu', data.data.menu);
+                            this.$store.commit('addMenu', this.$router);
                             // 提示登陆成功
                             this.$message({
                                 message: '登陆成功',

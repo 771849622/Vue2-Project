@@ -36,6 +36,8 @@ export default {
             if(command === 'cancel') {
                 // 清除cookie中的token
                 Cookie.remove('token');
+                // 清除cookie中的menu
+                Cookie.remove('menu');
                 // 跳转至登录页面
                 this.$router.push('/login');
             }
